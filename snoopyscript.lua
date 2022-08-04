@@ -26,6 +26,10 @@ Section:NewButton("tpspawn", "tp", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/DupeDawn/rbxme/main/spawnlocat.lua"))()
 end)
 
-
-
-
+Section:NewToggle("fastwalk", "fast", function(state)
+    if state then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DupeDawn/rbxme/main/speed.lua"))()
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
